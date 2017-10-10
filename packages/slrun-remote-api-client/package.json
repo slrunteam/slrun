@@ -1,0 +1,28 @@
+{
+  "name": "slrun-remote-api-client",
+  "version": "1.0.0",
+  "description": "The client library to interact with the remote API server.",
+  "main": "lib/index.js",
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "collectCoverageFrom": ["lib/**/*.js"],
+    "coverageThreshold": {
+      "global": {"statements": 100, "branches": 100, "functions": 100, "lines": 100}
+    }
+  },
+  "standard": {"env": {"jest": true}},
+  "scripts": {
+    "lint": "standard --fix",
+    "lint:ci": "standard",
+    "test": "jest",
+    "posttest": "npm run lint -s",
+    "test:ci": "jest --coverage",
+    "posttest:ci": "npm run lint:ci -s",
+    "ci": "npm run test:ci -s"
+  },
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-remote-api-client",
+  "author": "SL.RUN <team@sl.run>",
+  "license": "MIT",
+  "dependencies": {}
+}

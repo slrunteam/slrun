@@ -19,6 +19,9 @@
     "ci": "mono run ci"
   },
   "dependencies": {
-    "monorepo-helper": "^0.1.4"
+    "axios": "^0.16.2",
+    "jest": "^21.2.1",
+    "monorepo-helper": "^0.1.4",
+    "standard": "^10.0.3"
   }
 }
