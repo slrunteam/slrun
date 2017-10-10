@@ -1,0 +1,2 @@
+# slrun-memory-api-server
+An in-memory implementation of the remote API server. This should be used for development only.

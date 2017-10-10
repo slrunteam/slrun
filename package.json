@@ -13,6 +13,7 @@
   "scripts": {
     "boot": "mono boot",
     "build": "mono build",
+    "postinstall": "npm run boot && npm run build",
     "clean": "mono clean",
     "lint": "mono run lint",
     "test": "mono run test",
@@ -20,8 +21,11 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "jest": "^21.2.1",
     "monorepo-helper": "^0.1.4",
+    "morgan": "^1.9.0",
     "standard": "^10.0.3"
   }
 }
