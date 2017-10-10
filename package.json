@@ -1,0 +1,24 @@
+{
+  "name": "slrun",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "https://github.com/slrunteam/slrun",
+  "author": "SL.RUN <team@sl.run>",
+  "license": "MIT",
+  "config": {
+    "mono": {
+      "packageContainer": "packages"
+    }
+  },
+  "scripts": {
+    "boot": "mono boot",
+    "build": "mono build",
+    "clean": "mono clean",
+    "lint": "mono run lint",
+    "test": "mono run test",
+    "ci": "mono run ci"
+  },
+  "dependencies": {
+    "monorepo-helper": "^0.1.4"
+  }
+}
