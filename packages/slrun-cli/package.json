@@ -1,0 +1,35 @@
+{
+  "name": "slrun-cli",
+  "version": "1.0.0",
+  "description": "The CLI to manage services.",
+  "main": "lib/index.js",
+  "bin": {"slrun": "lib/index.js"},
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "collectCoverageFrom": ["lib/**/*.js"],
+    "coverageThreshold": {
+      "global": {"statements": 100, "branches": 100, "functions": 100, "lines": 100}
+    }
+  },
+  "standard": {"env": {"jest": true}},
+  "scripts": {
+    "lint": "standard --fix",
+    "lint:ci": "standard",
+    "test": "jest",
+    "posttest": "npm run lint -s",
+    "test:ci": "jest --coverage",
+    "posttest:ci": "npm run lint:ci -s",
+    "ci": "npm run test:ci -s"
+  },
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-cli",
+  "author": "SL.RUN <team@sl.run>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "childprocess-helper": "^0.1.1",
+    "slrun-local-client": "^1.0.0",
+    "slrun-local-server": "^1.0.0",
+    "yargs-parser": "^8.0.0"
+  }
+}

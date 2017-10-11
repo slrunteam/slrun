@@ -2,7 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
-function startRemoteServer () {
+async function startRemoteServer () {
   const remotePort = process.env.SLRUN_REMOTE_PORT || 4100
   const app = express()
   app.use(morgan('dev'))
