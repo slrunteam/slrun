@@ -1,5 +1,5 @@
 {
-  "name": "slrun-local-api-client",
+  "name": "slrun-local-client",
   "version": "1.0.0",
   "description": "The client library to interact with the local API server.",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "posttest:ci": "npm run lint:ci -s",
     "ci": "npm run test:ci -s"
   },
-  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-local-api-client",
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-local-client",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
   "dependencies": {"axios": "^0.16.2"}

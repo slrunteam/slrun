@@ -1,7 +1,7 @@
 {
-  "name": "slrun-remote-api-client",
+  "name": "slrun-remote-server",
   "version": "1.0.0",
-  "description": "The client library to interact with the remote API server.",
+  "description": "An in-memory implementation of the remote API server. This should be used for development only.",
   "main": "lib/index.js",
   "jest": {
     "testEnvironment": "node",
@@ -21,8 +21,8 @@
     "posttest:ci": "npm run lint:ci -s",
     "ci": "npm run test:ci -s"
   },
-  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-remote-api-client",
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-remote-server",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
-  "dependencies": {"axios": "^0.16.2"}
+  "dependencies": {"body-parser": "^1.18.2", "express": "^4.16.2", "morgan": "^1.9.0"}
 }
