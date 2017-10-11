@@ -1,0 +1,28 @@
+{
+  "name": "slrun-local-server",
+  "version": "1.0.0",
+  "description": "The local API server.",
+  "main": "lib/index.js",
+  "jest": {
+    "testEnvironment": "node",
+    "clearMocks": true,
+    "collectCoverageFrom": ["lib/**/*.js"],
+    "coverageThreshold": {
+      "global": {"statements": 100, "branches": 100, "functions": 100, "lines": 100}
+    }
+  },
+  "standard": {"env": {"jest": true}},
+  "scripts": {
+    "lint": "standard --fix",
+    "lint:ci": "standard",
+    "test": "jest",
+    "posttest": "npm run lint -s",
+    "test:ci": "jest --coverage",
+    "posttest:ci": "npm run lint:ci -s",
+    "ci": "npm run test:ci -s"
+  },
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-local-server",
+  "author": "SL.RUN <team@sl.run>",
+  "license": "MIT",
+  "dependencies": {"body-parser": "^1.18.2", "express": "^4.16.2", "morgan": "^1.9.0"}
+}
