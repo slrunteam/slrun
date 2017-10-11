@@ -1,5 +1,5 @@
 const express = require('express')
-const sshPoints = require('../../api/ssh-points')
+const sshPoints = require('./api')
 
 const router = express.Router()
 
