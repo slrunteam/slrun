@@ -17,7 +17,7 @@ async function ensureStart (argv) {
     }
     await sleep(100)
   }
-  throw new Error('Failed to start')
+  throw new Error('Failed to start slrun')
 }
 
 module.exports = ensureStart

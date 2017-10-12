@@ -13,15 +13,16 @@ async function startCLI () {
   if (['start', 'stop'].indexOf(command) === -1) {
     await ensureStart(argv)
   }
-  const exitCode = await commands[command](argv)
-  if (exitCode) {
-    process.exit(exitCode)
-  }
+  await commands[command](argv)
 }
 
 /* istanbul ignore if */
 if (require.main === module) {
-  startCLI().catch(console.error)
+  startCLI()
+    .catch((err) => {
+      console.error(err)
+      process.exit(1)
+    })
 }
 
 module.exports = startCLI
