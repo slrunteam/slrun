@@ -1,5 +1,5 @@
 {
-  "name": "slrun-remote-server",
+  "name": "slrun-dev-remote-server",
   "version": "1.0.0",
   "description": "An in-memory implementation of the remote API server. This should be used for development only.",
   "main": "lib/index.js",
@@ -21,7 +21,7 @@
     "posttest:ci": "npm run lint:ci -s",
     "ci": "npm run test:ci -s"
   },
-  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-remote-server",
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-dev-remote-server",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
   "dependencies": {"body-parser": "^1.18.2", "express": "^4.16.2", "morgan": "^1.9.0"}
