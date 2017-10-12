@@ -1,8 +1,13 @@
-const axios = require('axios')
-const { serverUrl } = require('slrun-local-client')
+const { control } = require('slrun-local-client')
 
 async function stop () {
-  await axios.post(`${serverUrl}/__slrun__/stop`)
+  if (!await control.isStarted()) {
+    return
+  }
+  try {
+    await control.stopServer()
+  } catch (e) {
+  }
 }
 
 module.exports = stop

@@ -1,8 +1,8 @@
 const axios = require('axios')
-const { getServerUrl } = require('./config')
 
 function createBase (basePath) {
-  return axios.create({ baseURL: `${getServerUrl()}/api${basePath}` })
+  const localPort = process.env.SLRUN_LOCAL_PORT || 4000
+  return axios.create({ baseURL: `http://127.0.0.1:${localPort}/api${basePath}` })
 }
 
 module.exports = createBase

@@ -1,5 +1,3 @@
-const { getServerUrl } = require('./config')
-
-exports.serverUrl = getServerUrl()
+exports.control = require('./control')
 
 exports.services = require('./services')

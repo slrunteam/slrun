@@ -1,7 +1,7 @@
 const startLocalServer = require('slrun-local-server')
 
 async function start () {
-  startLocalServer()
+  await startLocalServer()
 }
 
 module.exports = start

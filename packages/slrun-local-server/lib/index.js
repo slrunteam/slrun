@@ -9,19 +9,10 @@ async function startLocalServer () {
   const app = express()
   app.use(morgan('dev'))
   app.use(bodyParser.json())
-  app.use('/api', require('./routes/api'))
-  app.post('/__slrun__/stop', (req, res) => {
-    state.server.close(exitProcess)
-    setTimeout(exitProcess, 1000)
-    res.send('OK')
-  })
+  app.use('/api', require('./routes/api')(state))
   state.server = app.listen(localPort, () => {
     console.log(`local-server is running at http://127.0.0.1:${localPort}`)
   })
-}
-
-function exitProcess () {
-  process.exit()
 }
 
 /* istanbul ignore if */

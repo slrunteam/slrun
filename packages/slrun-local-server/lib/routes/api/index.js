@@ -1,7 +1,10 @@
 const express = require('express')
 
-const router = express.Router()
+function createAPIRouter (state) {
+  const router = express.Router()
+  router.use('/control', require('./control')(state))
+  router.use('/services', require('./services'))
+  return router
+}
 
-router.use('/services', require('./services'))
-
-module.exports = router
+module.exports = createAPIRouter

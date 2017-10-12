@@ -26,8 +26,7 @@
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
-    "childprocess-helper": "^0.1.1",
+    "childprocess-helper": "^0.1.2",
     "slrun-local-client": "^1.0.0",
     "slrun-local-server": "^1.0.0",
     "yargs-parser": "^8.0.0"
