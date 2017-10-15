@@ -24,5 +24,21 @@
   "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-local-server",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
-  "dependencies": {"body-parser": "^1.18.2", "express": "^4.16.2", "morgan": "^1.9.0"}
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "childprocess-helper": "^1.0.2",
+    "ecstatic": "^3.0.0",
+    "express": "^4.16.2",
+    "express-status-monitor": "^1.0.1",
+    "f-promise": "^1.2.11",
+    "helmet": "^3.9.0",
+    "http-proxy": "^1.16.2",
+    "is-directory": "^0.3.1",
+    "is-url": "^1.2.2",
+    "morgan": "^1.9.0",
+    "serialize-error": "^2.1.0",
+    "slrun-remote-client": "^1.0.0",
+    "ssh2": "^0.5.5",
+    "verror": "^1.10.0"
+  }
 }

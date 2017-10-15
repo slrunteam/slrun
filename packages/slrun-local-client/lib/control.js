@@ -1,15 +1,29 @@
+const { run, wait } = require('f-promise')
+const { VError } = require('verror')
 const createBase = require('./base')
 
 const base = createBase('/control')
 
-exports.getStatus = async () => (await base.get('/status')).data
-
-exports.isStarted = async () => {
+exports.getStatus = () => run(() => {
   try {
-    return await exports.getStatus() === 'SL.RUN Local Server'
+    return wait(base.get('/status')).data
+  } catch (err) {
+    throw new VError(err, 'Failed to get status')
+  }
+})
+
+exports.isStarted = () => run(() => {
+  try {
+    return wait(exports.getStatus()) === 'SL.RUN Local Server'
   } catch (e) {
     return false
   }
-}
+})
 
-exports.stopServer = async () => (await base.post('/stop')).data
+exports.stopServer = () => run(() => {
+  try {
+    return wait(base.post('/stop')).data
+  } catch (err) {
+    throw new VError(err, 'Failed to stop server')
+  }
+})

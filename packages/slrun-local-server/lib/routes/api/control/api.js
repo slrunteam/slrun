@@ -1,10 +1,11 @@
-exports.getStatus = async function () {
-  return 'SL.RUN Local Server'
+exports.getStatus = () => {
+  return Promise.resolve('SL.RUN Local Server')
 }
 
-exports.stopServer = async function (server) {
+exports.stopServer = (server) => {
   server.close(exitProcess)
   setTimeout(exitProcess, 1000)
+  return Promise.resolve()
 }
 
 function exitProcess () {
