@@ -1,2 +1,2 @@
-# slrun-cli
+# slrun
 The CLI to manage services.

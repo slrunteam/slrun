@@ -1,12 +1,31 @@
+const { run, wait } = require('f-promise')
 const express = require('express')
 const services = require('./api')
 
 const router = express.Router()
 
-router.post('/', async (req, res) => res.send(await services.add(req.body)))
+router.post('/', (req, res, next) => run(() => {
+  try {
+    res.send(wait(services.add(req.body)))
+  } catch (err) {
+    next(err)
+  }
+}))
 
-router.delete('/:id', async (req, res) => res.send(await services.remove(req.params.id)))
+router.delete('/:id', (req, res, next) => run(() => {
+  try {
+    res.send(wait(services.remove(req.params.id)))
+  } catch (err) {
+    next(err)
+  }
+}))
 
-router.get('/', async (req, res) => res.send(await services.list()))
+router.get('/', (req, res, next) => run(() => {
+  try {
+    res.send(wait(services.list()))
+  } catch (err) {
+    next(err)
+  }
+}))
 
 module.exports = router

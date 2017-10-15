@@ -1,5 +1,5 @@
 {
-  "name": "slrun-cli",
+  "name": "slrun",
   "version": "1.0.0",
   "description": "The CLI to manage services.",
   "main": "lib/index.js",
@@ -22,13 +22,17 @@
     "posttest:ci": "npm run lint:ci -s",
     "ci": "npm run test:ci -s"
   },
-  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-cli",
+  "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
   "dependencies": {
-    "childprocess-helper": "^0.1.2",
+    "childprocess-helper": "^1.0.2",
+    "f-promise": "^1.2.11",
+    "is-directory": "^0.3.1",
+    "is-url": "^1.2.2",
     "slrun-local-client": "^1.0.0",
     "slrun-local-server": "^1.0.0",
+    "verror": "^1.10.0",
     "yargs-parser": "^8.0.0"
   }
 }
