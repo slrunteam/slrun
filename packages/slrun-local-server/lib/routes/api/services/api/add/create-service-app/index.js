@@ -11,6 +11,7 @@ function createServiceApp (options) {
             return
           case 'error':
             reject(payload)
+            return
         }
       })
       .send({ type: 'create', payload: options })

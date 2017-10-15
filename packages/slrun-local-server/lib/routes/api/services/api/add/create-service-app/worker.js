@@ -39,6 +39,7 @@ if (require.main === module) {
             process.send({ type: 'error', payload: serializeError(err) })
             process.exit(1)
           })
+        return
     }
   })
   process.on('disconnect', () => {
