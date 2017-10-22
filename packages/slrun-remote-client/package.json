@@ -24,5 +24,5 @@
   "repository": "https://github.com/slrunteam/slrun/tree/master/packages/slrun-remote-client",
   "author": "SL.RUN <team@sl.run>",
   "license": "MIT",
-  "dependencies": {"axios": "^0.16.2", "f-promise": "^1.2.11", "verror": "^1.10.0"}
+  "dependencies": {"axios": "^0.17.0", "f-promise": "^1.2.11", "verror": "^1.10.0"}
 }

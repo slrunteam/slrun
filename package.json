@@ -20,7 +20,7 @@
     "ci": "mono run ci && nsp check"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.17.0",
     "body-parser": "^1.18.2",
     "childprocess-helper": "^1.0.2",
     "ecstatic": "^3.0.0",
