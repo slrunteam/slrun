@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An in-memory implementation of the remote API server. This should be used for development only.",
   "main": "lib/index.js",
+  "config": {"mono": {"bins": ["standard", "jest"]}},
   "jest": {
     "testEnvironment": "node",
     "clearMocks": true,

@@ -7,11 +7,9 @@ function createServiceApp (options) {
       .on('message', ({ type, payload }) => {
         switch (type) {
           case 'info':
-            resolve(payload)
-            return
+            return resolve(payload)
           case 'error':
-            reject(payload)
-            return
+            return reject(payload)
         }
       })
       .send({ type: 'create', payload: options })

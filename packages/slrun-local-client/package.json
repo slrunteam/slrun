@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The client library to interact with the local API server.",
   "main": "lib/index.js",
+  "config": {"mono": {"bins": ["standard", "jest"]}},
   "jest": {
     "testEnvironment": "node",
     "clearMocks": true,

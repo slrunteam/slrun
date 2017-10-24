@@ -4,6 +4,7 @@
   "description": "The CLI to manage services.",
   "main": "lib/index.js",
   "bin": {"slrun": "lib/index.js"},
+  "config": {"mono": {"bins": ["standard", "jest"]}},
   "jest": {
     "testEnvironment": "node",
     "clearMocks": true,

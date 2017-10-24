@@ -41,6 +41,6 @@
     "yargs-parser": "^8.0.0"
   },
   "devDependencies": {
-    "monorepo-helper": "^0.1.6"
+    "monorepo-helper": "^0.1.7"
   }
 }

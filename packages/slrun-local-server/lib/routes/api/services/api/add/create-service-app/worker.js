@@ -34,12 +34,11 @@ if (require.main === module) {
   process.on('message', ({ type, payload }) => {
     switch (type) {
       case 'create':
-        createServiceWorker(payload)
+        return createServiceWorker(payload)
           .catch((err) => {
             process.send({ type: 'error', payload: serializeError(err) })
             process.exit(1)
           })
-        return
     }
   })
   process.on('disconnect', () => {
